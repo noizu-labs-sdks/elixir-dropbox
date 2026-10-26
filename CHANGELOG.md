@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-26
+
+- docs: seed doc pointers — 9 loci in `.meta/pointers.yaml` + full-UUID markers on README, entry/core modules, and Files/Sharing API modules (PR #5)
+- docs: doc-sweep (layout/arch/schema/threat-model) — corrected test-stub mechanism (`Mimic.copy(Finch)` + `finch_stub.ex`), `Metadata` field count, and documented `%Client{}` fields + `request_fun` transport hook; direct to `develop`
+
 ## 0.1.0
 
 - Initial release: full Dropbox API v2 Elixir client

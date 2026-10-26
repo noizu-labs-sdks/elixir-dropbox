@@ -15,7 +15,7 @@ env). Responses decode to structs (`Account`, `Metadata`,
 
 **Decisions**: 1:1 REST mirroring (no DSL/codegen); `raw` passthrough on
 structs for forward compatibility; single Finch pool for cheap embedding;
-OAuth secret via Basic header XOR form body; tests fully mocked via Finch
-stub (coverage threshold 30).
+OAuth secret via Basic header XOR form body; tests fully mocked via
+`Mimic.copy(Finch)` + `finch_stub.ex` response helpers (coverage threshold 30).
 
 Full detail: [PROJ-ARCH.md](PROJ-ARCH.md).

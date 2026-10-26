@@ -26,6 +26,21 @@ consumed by `Noizu.Dropbox.Client`.
 
 All credential keys default to `nil`; secrets live in env/runtime config only.
 
+### Client struct — `lib/dropbox/client.ex`
+
+`%Noizu.Dropbox.Client{}` intersects the config above with per-call overrides
+(opts beat app env; nothing is persisted):
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `select_user` | String \| nil | `nil` | Team member id → `Dropbox-API-Select-User` |
+| `select_admin` | String \| nil | `nil` | Team admin id → `Dropbox-API-Select-Admin` |
+| `path_root` | map \| String \| nil | `nil` | Root namespace → `Dropbox-API-Path-Root` |
+| `finch` | atom | `Noizu.Dropbox.Finch` | Finch pool name |
+
+`HTTP` additionally reads `Application.get_env(:noizu_dropbox, :request_fun)`
+directly (arity 1 or 4) as a custom/test transport hook — not a `config.exs` default.
+
 ## OAuth2 payload shapes — `lib/dropbox/oauth.ex`
 
 `token/1` and `refresh_token/2` POST form bodies to `{oauth_base}token`.

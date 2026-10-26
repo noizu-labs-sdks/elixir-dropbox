@@ -10,7 +10,8 @@ parser; app env `request_fun` → transport.
 Register: 8 entries — T-001 credential storage (mitigated: nil defaults,
 env-only secrets) · T-002 atom-table exhaustion via `:atoms` decode (partial;
 use `:strings` for untrusted) · T-003 401 refresh loop (mitigated: single
-retry) · T-004 `request_fun` transport hook (accepted test hook) · T-005 raw
+retry) · T-004 `request_fun` transport hook (accepted test/custom hook; suites
+use Mimic) · T-005 raw
 bodies in `%Error{}` may leak to logs (open, caller-side) · T-006 no cert
 pinning (accepted) · T-007 OAuth secret Basic-XOR-body (mitigated) · T-008 no
 429 backoff (open, caller-side).

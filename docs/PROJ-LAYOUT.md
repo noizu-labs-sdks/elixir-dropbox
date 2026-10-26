@@ -11,11 +11,11 @@ elixir-dropbox/
 │   └── dropbox/                    #   Client core + api/ + struct/
 ├── config/                         # Compile/runtime config
 │   ├── config.exs                  #   Defaults: API bases, timeouts, token nils
-│   ├── dev.exs                     #   Dev overrides
-│   └── test.exs                    #   Test overrides (stub-friendly)
+│   ├── dev.exs                     #   Placeholder (`import Config` only; no overrides)
+│   └── test.exs                    #   Test overrides (access_token + API bases)
 ├── test/                           # ExUnit suites
 │   ├── api/                        #   Per-namespace endpoint tests (files, sharing, …)
-│   ├── support/finch_stub.exs      #   Finch transport stub for offline tests
+│   ├── support/finch_stub.ex       #   FinchStub response helpers (paired with Mimic.copy(Finch))
 │   └── test_helper.exs
 ├── .claude/worktrees/              # Agent worktrees (gitignored)
 ├── .formatter.exs                  # `mix format` config
@@ -40,8 +40,11 @@ elixir-dropbox/
 - Credentials are injected via config (`:noizu_dropbox` → `access_token`,
   `refresh_token`, `app_key`, `app_secret`); all default to `nil` — never
   committed.
+- Tests stub the transport with `Mimic.copy(Finch)` (`test/test_helper.exs`);
+  `test/support/finch_stub.ex` provides the `Finch.Response` builders.
 - Generated/local artifacts (`_build/`, `deps/`, `cover/`, `doc/`,
-  `erl_crash.dump`, `*.tar`) are gitignored.
+  `erl_crash.dump`, `*.beam`, `*.ez`, `*.tar`, `tmp/`, `.elixir_ls/`) are
+  gitignored.
 
 ## Key Files Requiring Setup
 

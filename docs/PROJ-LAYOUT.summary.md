@@ -4,7 +4,7 @@
 elixir-dropbox/
 ├── lib/                # Source → layout/lib.md (dropbox core, api/, struct/)
 ├── config/             # config/dev/test.exs — API bases, tokens default nil
-├── test/               # ExUnit; api/ suites + support/finch_stub.exs
+├── test/               # ExUnit; api/ suites (Mimic.copy(Finch)) + support/finch_stub.ex
 ├── .claude/worktrees/  # Agent worktrees (gitignored)
 ├── .formatter.exs
 ├── .tool-versions      # Elixir 1.20.1-otp-29 / Erlang 29.0.2
@@ -14,4 +14,4 @@ elixir-dropbox/
 └── README.md
 ```
 
-Ignored build artifacts: `_build/`, `deps/`, `cover/`, `doc/`, `erl_crash.dump`, `*.tar`.
+Ignored build artifacts: `_build/`, `deps/`, `cover/`, `doc/`, `erl_crash.dump`, `*.beam`, `*.ez`, `*.tar`, `tmp/`, `.elixir_ls/`.

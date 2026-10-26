@@ -36,7 +36,7 @@ Trust boundary crossings: caller → library (opts/env), library → Dropbox
 | T-001 | High | Info disclosure | Credentials in `config :noizu_dropbox` / `%Client{}` | Mitigated by convention: all keys default `nil`, secrets never committed; supply via env/runtime (Infisical) |
 | T-002 | Medium | DoS | `:atoms` decode mode creates atoms from response keys (`HTTP.decode_json`) | Partial: default `:atoms` on `rpc`; a hostile/compromised endpoint could exhaust the atom table. Use `:strings`/`:raw` for untrusted responses |
 | T-003 | Low | Spoofing | 401 auto-refresh + retry (`maybe_refresh_retry`) | Mitigated: single retry, bearer-only, guarded by `__retried_401` flag — no refresh loops |
-| T-004 | Medium | Tampering / EoP | `request_fun` app-env hook replaces the transport process-wide | Accepted: test hook; any attacker who can set app env already owns the BEAM |
+| T-004 | Medium | Tampering / EoP | `request_fun` app-env hook replaces the transport process-wide | Accepted: test/custom transport hook (test suites use `Mimic.copy(Finch)` instead); any attacker who can set app env already owns the BEAM |
 | T-005 | Low | Info disclosure | `%Error{body}`/`raw` fields retain full response bodies — may surface in logs | Open (accepted): callers must not `inspect` errors into shared logs |
 | T-006 | Low | Spoofing | No certificate pinning; standard CA validation only | Accepted: standard for API clients; MITM requires CA compromise |
 | T-007 | Low | Info disclosure | OAuth secret sent in Basic header XOR form body, never both | Mitigated by code (`maybe_secret`) |

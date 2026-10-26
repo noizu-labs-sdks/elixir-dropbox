@@ -44,7 +44,7 @@ graph TB
 
 | Component | Purpose |
 |-----------|---------|
-| `Noizu.Dropbox.Client` | Immutable config/token record; opts merge over `:noizu_dropbox` app env; team acting via `as_user`/`as_admin` |
+| `Noizu.Dropbox.Client` | Immutable config/token record; opts merge over `:noizu_dropbox` app env; team acting via `as_user`/`as_admin`; root namespace via `path_root` (`Dropbox-API-Path-Root`); helpers `require_token`/`put_access_token`/`normalize_base` |
 | `Noizu.Dropbox.HTTP` | Low-level transport: `rpc`, `rpc_empty`, `content_upload`, `content_download`, `notify`, `form_post`; decode modes `:atoms`/`:strings`/`:raw`/module `from_json/1` |
 | `Noizu.Dropbox.OAuth` | Authorization URL builder, code exchange, refresh, `refresh_client/1`, PKCE S256 `pkce_pair/0` |
 | `Noizu.Dropbox.Api.*` | One thin module per Dropbox namespace (`lib/dropbox/api/`) using `Api` macro for shared plumbing |
@@ -77,8 +77,10 @@ Design notes:
 
 - Elixir ~> 1.14 (repo pins 1.20.1-otp-29 / Erlang 29 via `.tool-versions`)
 - Finch ~0.18 (HTTP), Jason ~1.4 (JSON) — only runtime deps
-- ExUnit with a Finch transport stub (`test/support/finch_stub.exs`) so the
-  suite runs fully mocked; coverage threshold 30 (thin wrappers)
+- Test-only deps: Mimic (Finch stubbing), JUnit formatter; ExUnit suites stub
+  `Finch.request/3` via `Mimic.copy(Finch)` (`test/test_helper.exs`) and build
+  responses with `test/support/finch_stub.ex`, so the suite runs fully mocked;
+  coverage threshold 30 (thin wrappers)
 
 ## Key Decisions
 
