@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.Client do
   @moduledoc """
+  〚📦:09bda707-8e62-5944-b13d-94695c7e1882〛 Noizu.Dropbox.Client :: Immutable config/token record; opts merge over `:noizu_dropbox` env; team-select and path-root headers.
+
   Client configuration for Dropbox API calls.
 
   Prefer building a client once and passing it via opts:

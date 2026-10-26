@@ -1,5 +1,7 @@
 # Noizu Dropbox
 
+<!-- 〚📁:7fbba55c-4168-5965-956b-786259c7687e〛 README :: Project entry point: install, configuration, usage examples, architecture table. -->
+
 Full **Dropbox API v2** client for Elixir.
 
 Covers RPC endpoints, content upload/download, OAuth2 (short-lived tokens +

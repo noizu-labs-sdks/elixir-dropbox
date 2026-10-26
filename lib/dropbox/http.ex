@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.HTTP do
   @moduledoc """
+  〚📦:693f1f11-9020-523b-8298-556ce6c7e71b〛 Noizu.Dropbox.HTTP :: Low-level transport: rpc/rpc_empty/content_upload/content_download/notify/form_post with decode modes and a single 401 refresh+retry.
+
   Low-level HTTP helpers for Dropbox API v2.
 
   Dropbox uses three styles of endpoints:
