@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.Application do
-  @moduledoc false
+  @moduledoc """
+  〚📦:7274fe3f-03e2-58ba-900f-645ee6a67c73〛 Noizu.Dropbox.Application :: OTP application; supervises the sole `Noizu.Dropbox.Finch` pool.
+  """
   use Application
 
   @impl true

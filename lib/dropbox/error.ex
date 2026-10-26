@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.Error do
   @moduledoc """
+  〚📦:5bb470f6-1467-52ee-9403-ba559bead80e〛 Noizu.Dropbox.Error :: Structured exception (status/body/reason/summary/tag) with from_response/transport/codec/config constructors.
+
   Structured error returned by Dropbox API calls.
   """
 

@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox do
   @moduledoc """
+  〚📦:ed505482-2663-5794-ac7c-e74495118c74〛 Noizu.Dropbox :: Top-level entry: client/1 builder and default base-URL helpers over the Dropbox API v2 client.
+
   Noizu Dropbox — full Dropbox API v2 client for Elixir.
 
   ## Quick start

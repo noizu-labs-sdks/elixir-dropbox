@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.Api.Files do
   @moduledoc """
+  〚📦:6861f116-5a5d-52ff-af5a-e7af5205abf4〛 Noizu.Dropbox.Api.Files :: Dropbox `files/*` namespace: listing, upload/download, copy/move/delete, search, revisions, locks, tags, thumbnails, upload sessions.
+
   Dropbox `files/*` endpoints — listing, upload/download, copy/move/delete,
   search, revisions, locks, tags, thumbnails, and upload sessions.
   """

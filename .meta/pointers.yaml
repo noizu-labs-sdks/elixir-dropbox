@@ -1,0 +1,110 @@
+---
+pointers:
+  09bda707-8e62-5944-b13d-94695c7e1882:
+    created_at: 2026-10-26T23:26:58.979501Z
+    description: Immutable config/token record; opts merge over `:noizu_dropbox` env; team-select and path-root headers.
+    file_path: lib/dropbox/client.ex
+    function: Noizu.Dropbox.Client
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/dropbox/client.ex
+        line: 3
+    token: 𓰥𓉌𓨰𓺒
+    updated_at: 2026-10-26T23:26:58.979501Z
+  5bb470f6-1467-52ee-9403-ba559bead80e:
+    created_at: 2026-10-26T23:26:58.979481Z
+    description: Structured exception (status/body/reason/summary/tag) with from_response/transport/codec/config constructors.
+    file_path: lib/dropbox/error.ex
+    function: Noizu.Dropbox.Error
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/dropbox/error.ex
+        line: 3
+    token: 𓌄𓽞𔊋𓈞
+    updated_at: 2026-10-26T23:26:58.979481Z
+  6861f116-5a5d-52ff-af5a-e7af5205abf4:
+    created_at: 2026-10-26T23:26:58.979508Z
+    description: 'Dropbox `files/*` namespace: listing, upload/download, copy/move/delete, search, revisions, locks, tags, thumbnails, upload sessions.'
+    file_path: lib/dropbox/api/files.ex
+    function: Noizu.Dropbox.Api.Files
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/dropbox/api/files.ex
+        line: 3
+    token: 𓹽𓪀𓻹𐦄
+    updated_at: 2026-10-26T23:26:58.979508Z
+  693f1f11-9020-523b-8298-556ce6c7e71b:
+    created_at: 2026-10-26T23:26:58.979505Z
+    description: 'Low-level transport: rpc/rpc_empty/content_upload/content_download/notify/form_post with decode modes and a single 401 refresh+retry.'
+    file_path: lib/dropbox/http.ex
+    function: Noizu.Dropbox.HTTP
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/dropbox/http.ex
+        line: 3
+    token: 𓸊𓛶𔗦𓾋
+    updated_at: 2026-10-26T23:26:58.979505Z
+  7274fe3f-03e2-58ba-900f-645ee6a67c73:
+    created_at: 2026-10-26T23:26:58.979494Z
+    description: OTP application; supervises the sole `Noizu.Dropbox.Finch` pool.
+    file_path: lib/application.ex
+    function: Noizu.Dropbox.Application
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/application.ex
+        line: 3
+    token: 𓘾𓟈𓴠𓶃
+    updated_at: 2026-10-26T23:26:58.979494Z
+  7fbba55c-4168-5965-956b-786259c7687e:
+    created_at: 2026-10-26T23:26:58.979465Z
+    description: 'Project entry point: install, configuration, usage examples, architecture table.'
+    file_path: README.md
+    function: README
+    kind: file
+    line: 3
+    locations:
+      - file_path: README.md
+        line: 3
+    token: 𓄘𓢟𓚦𓎾
+    updated_at: 2026-10-26T23:26:58.979465Z
+  852a908b-26f2-5da8-8628-8157d3478868:
+    created_at: 2026-10-26T23:26:58.979515Z
+    description: 'Dropbox `sharing/*` namespace: shared folders, files, members, and shared links.'
+    file_path: lib/dropbox/api/sharing.ex
+    function: Noizu.Dropbox.Api.Sharing
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/dropbox/api/sharing.ex
+        line: 3
+    token: 𓺪𔌙𔌼𓐈
+    updated_at: 2026-10-26T23:26:58.979515Z
+  b408bb36-76dd-59c0-85d8-deae6e955bbc:
+    created_at: 2026-10-26T23:26:58.979491Z
+    description: 'OAuth2: authorize URL, code exchange, refresh, refresh_client/1, and PKCE S256 pkce_pair/0.'
+    file_path: lib/dropbox/oauth.ex
+    function: Noizu.Dropbox.OAuth
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/dropbox/oauth.ex
+        line: 3
+    token: 𓒕𐦜𓜯𓠼
+    updated_at: 2026-10-26T23:26:58.979491Z
+  ed505482-2663-5794-ac7c-e74495118c74:
+    created_at: 2026-10-26T23:26:58.979498Z
+    description: 'Top-level entry: client/1 builder and default base-URL helpers over the Dropbox API v2 client.'
+    file_path: lib/noizu_dropbox.ex
+    function: Noizu.Dropbox
+    kind: module
+    line: 3
+    locations:
+      - file_path: lib/noizu_dropbox.ex
+        line: 3
+    token: 𓨿𓍒𔅢𓪤
+    updated_at: 2026-10-26T23:26:58.979498Z

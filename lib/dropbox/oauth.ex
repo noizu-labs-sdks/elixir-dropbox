@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.OAuth do
   @moduledoc """
+  〚📦:b408bb36-76dd-59c0-85d8-deae6e955bbc〛 Noizu.Dropbox.OAuth :: OAuth2: authorize URL, code exchange, refresh, refresh_client/1, and PKCE S256 pkce_pair/0.
+
   OAuth2 helpers for Dropbox.
 
   Supports the modern short-lived access token + refresh token flow.

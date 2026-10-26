@@ -1,5 +1,7 @@
 defmodule Noizu.Dropbox.Api.Sharing do
   @moduledoc """
+  〚📦:852a908b-26f2-5da8-8628-8157d3478868〛 Noizu.Dropbox.Api.Sharing :: Dropbox `sharing/*` namespace: shared folders, files, members, and shared links.
+
   Dropbox `sharing/*` endpoints — folders, files, members, and shared links.
   """
 
