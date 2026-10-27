@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-28
+
+- docs: add AGENT-README.md (agent orientation)
+
 ## 2026-10-26
 
 - docs: seed doc pointers — 9 loci in `.meta/pointers.yaml` + full-UUID markers on README, entry/core modules, and Files/Sharing API modules (PR #5)
